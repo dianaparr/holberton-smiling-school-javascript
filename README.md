@@ -99,7 +99,7 @@ For this project, you will need: fonts from Google, JQuery, Bootstrap CSS/JS
         <script src="scripts.js"></script>
 
 ## Tasks
-[**0. Reuse and polish your Bootstrap integration:**]
+**0. Reuse and polish your Bootstrap integration:**
 
 Copy files from `0x0B. Implement a design with bootstrap`:
 
@@ -126,7 +126,43 @@ For this task, please write an amazing `README.md`
 
 - Web pages must switch to the tablet version when the screen width is 768px
 - Web pages must switch to the mobile version when the screen width is 576px
-- button hover/active: opacity: 0.9
+- button hover/active: `opacity: 0.9`
 
 <br />
+
+[**1. Homepage - quotes:**](1-homepage.html)
+
+From `0-homepage.html`, create `1-homepage.html`.
+
+Replace static quotes by dynamic loading:
+
+- URL: `https://smileschool-api.hbtn.info/quotes`
+- No static quotes should be present in the quotes section
+- During the Ajax request, a loader should be present
+- Carousel should work like before
+
+Example of my loader:
+
+        HTML:
+        <div class="loader"></div>
+
+        CSS:
+        .loader {
+            border: 10px solid #f3f3f3;
+            border-top: 10px solid #C271FF;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+Final result:
+
+![final-result-1](img/task1.gif)
 
