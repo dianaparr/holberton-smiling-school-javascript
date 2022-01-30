@@ -1,0 +1,442 @@
+/* Variables
+============================= */
+:root {
+    --font-family-base: "Source Sans Pro", sans-serif;
+    --text-color: #FFFFFF;
+    --color-primary: #C271FF;
+    --color-black: #090909;
+    --color-white: #FFFFFF;
+
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 600;
+
+    --font-size-xsmall: 12px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 32px;
+    --font-size-xlarge: 120px;
+
+    --line-height-xsmall: 15px;
+    --line-height-button: 18px;
+    --line-height-medium: 20px;
+    --line-height-large: 40px;
+    --line-height-base: 26px;
+    --line-height-xlarge: 151px;
+
+    --button-hover-active-opacity: 0.9;
+}
+
+/* Helpers
+============================= */
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.off-screen {
+    left: -100vw;
+    position: absolute;
+}
+
+.skip-link {
+    background: var(--color-black);
+    color: var(--color-white);
+    left: 0;
+    padding: .7rem;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    z-index: 10;
+    transform: translateY(-1rem);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+.skip-link:focus {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Base
+============================= */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    background-color: #F2F2F2;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--color-primary);
+}
+
+.header-homepage {
+    background-image: url(images/pic_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    max-width: 100%;
+}
+
+.header-pricing {
+    background-image: url(images/pic_2.jpg);
+    background-color: #071629;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    max-width: 100%;
+}
+
+.header-courses {
+    background-image: url(/images/pic_3.jpg);
+    background-color: #071629;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Hero section
+============================= */
+
+.section-title {
+    font-size: var(--font-size-xlarge);
+    line-height: var(--line-height-xlarge);
+    margin-top: 130px;
+    margin-bottom: -12px;
+}
+
+.section-title-courses {
+    font-family: Coiny;
+    font-size: var(--font-size-large);
+    line-height: 35px;
+}
+
+.hero-section li {
+    font-size: var(--font-size-medium);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    opacity: var(--button-hover-active-opacity);
+    background-color: var(--color-primary);
+}
+
+.btn-text p {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    line-height: var(----line-height-button);
+}
+
+.hero-section button {
+    margin: 30px auto 160px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+h3.title-hero-pricing {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+    padding-top: 180px;
+}
+
+h1.big-title {
+    font-size: 60px;
+    line-height: 76px;
+    padding-top: 75px;
+    padding-bottom: 55px;
+}
+
+/* Search section
+============================= */
+
+.title-search {
+    font-size: var(--font-size-xsmall);
+    line-height: var(--line-height-xsmall);
+}
+
+.input-color,
+.input-color:focus {
+    background-color: #d195ff;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 29px;
+}
+
+.input-color::placeholder {
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.icon-search {
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.title-button,
+.option-style,
+.option-style:active,
+.option-style:focus {
+    background-color: #d195ff;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 29px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+/* List of result videos
+============================ */
+.number-videos {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    color: rgba(7, 22, 41, 0.296247);
+}
+
+.number-videos:hover {
+    text-decoration: underline;
+}
+
+/* Pros section
+============================= */
+li.col-lg {
+    padding-bottom: 60px;
+    flex-basis: 0;
+}
+
+li.col-lg img {
+    width: 150px;
+    height: 150px;
+}
+
+span.pros-title {
+    color: var(--color-primary);
+}
+
+.title-pros {
+    font-size: var(--font-size-large);
+}
+
+.pros-section h2 {
+    margin-bottom: 100px;
+}
+
+.col p {
+    margin-bottom: 0;
+    font-size: var(--font-size-medium);
+}
+
+.col p.name-pro,
+p.name-pro {
+    font-size: 18px;
+}
+
+/* Pricing section
+============================= */
+
+.btn-pricing {
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-button);
+}
+
+.title-pricing {
+    font-size: 44px;
+    line-height: 56px;
+}
+
+.sub-pricing,
+.subs-mobile {
+    font-size: var(--font-size-xsmall);
+    line-height: var(--line-height-xsmall);
+}
+
+.sub-pricing {
+    opacity: 0.5;
+}
+
+.conditions-pricing {
+    font-size: 18px;
+    line-height: 34px;
+    text-align: left;
+}
+
+.icon-check {
+    font-size: 28px;
+}
+
+.color-hr {
+    background-color: #ffffff;
+}
+
+/* Carousel section
+============================= */
+
+.bg-carousel {
+    background-color: var(--color-primary);
+}
+
+.info-carousel p {
+    font-size: 22px;
+    line-height: 33.6px;
+    margin-left: -50px;
+}
+
+/* Carousel tutorials section
+============================= */
+
+.bg-tutorials {
+    background-color: #FFFFFF;
+}
+
+.tutorials-title {
+    font-size: var(--font-size-large);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.play-icon {
+    margin: -110px 0 0 95px;
+}
+
+.card-video {
+    width: 255px;
+    height: 355px;
+}
+
+.card-body .title-card {
+    margin-top:45px;
+    font-size: var(--font-size-medium);
+    line-height: 20px;
+}
+
+.card-body span {
+    font-size: var(--font-size-small);
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.title-view {
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Free membership section
+============================= */
+
+.bg-free-membership {
+    background-color: #071629;
+}
+
+/* FAQ section
+============================= */
+
+.title-faq {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+}
+
+.text-faq {
+    font-size: var(--font-size-small);
+    line-height: 24px;
+    color: rgba(7, 22, 41, 0.501584);
+}
+
+/* Footer
+============================= */
+
+div.container .mark {
+    font-size: var(--font-size-xsmall);
+    line-height: var(--line-height-xsmall);
+    color: var(--color-white);
+    background-color: #071629;
+    opacity: 0.35;
+    mix-blend-mode: normal;
+    align-self:flex-end;
+}
+
+.social-link {
+    color: var(--color-white);
+    font-size: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-logo {
+        flex-basis: 70%;
+    }
+
+    .header {
+        background-position: center;
+        background-position-y: 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .header {
+        background-color: #071629;
+    }
+
+    .container {
+        max-width: 576px;
+    }
+
+    .section-title {
+        font-size: 61px;
+        line-height: 97px;
+        margin-top: 270px;
+        margin-bottom: 10px;
+    }
+
+    .row-cols-sm-4>* {
+        max-width: 100%;
+    }
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    ul.pros-img li {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .info-carousel p {
+        margin-left: -5px;
+    }
+}
